@@ -24,7 +24,7 @@ def home(request):
         request.session["portfolio_info"]=profile_detais["portfolio_info"]
         request.session["role"]=profile_detais["portfolio_info"]["role"]
         return redirect('/page')
-    elif code == '100093':
+    elif id == '100093':
         url="https://100093.pythonanywhere.com/api/userinfo/"
         response=requests.post(url,data={"session_id":session_id}) 
         profile_detais= json.loads(response.text)
